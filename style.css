@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap");
+/* root */
+:root {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  font-family: "Space Mono", monospace;
+  padding: 0.2rem;
+}
+
+/* not-found */
+#not-found {
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+  color: #333333;
+  font-size: 24px;
+}
+
+/* image-div */
+
+.image-div img {
+  max-width: 100%;
+}
+
+/* content-div */
+
+.content-div h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 71.09px;
+  color: #333333;
+  margin-top: 3rem;
+  margin-bottom: 0px;
+}
+
+.content-div p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26.66px;
+  color: #4f4f4f;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.content-div button {
+  border-radius: 50px;
+  display: inline-block;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  background-color: #6a3085;
+  border: 0px;
+  cursor: pointer;
+  margin-bottom: 5rem;
+}
+
+.content-div button:hover {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #4b8530;
+  outline: 3px solid #6a3085;
+  transition: all 100ms ease-in;
+  color: rgb(137, 148, 43);
+}
+
+@media (min-width: 800px) {
+  body {
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    max-width: 1000px;
+    display: grid;
+    grid-template-areas: "image-div content-div";
+    grid-template-columns: 1fr 1fr;
+    column-gap: 7rem;
+    /* margin: auto; */
+    margin: auto auto;
+  }
+
+  #not-found {
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+  }
+
+  .image-div {
+    grid-area: image-div;
+    max-width: 540px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .content-div {
+    grid-area: content-div;
+    max-width: 540px;
+  }
+
+  .content-div p {
+    max-width: 300px;
+  }
+}
